@@ -1,0 +1,68 @@
+---
+const features = [
+  {
+    icon: "⚡",
+    title: "高速",
+    description: "業界最速レベルのパフォーマンスを実現します。",
+  },
+  {
+    icon: "🔒",
+    title: "安全",
+    description: "最新のセキュリティ基準に対応しています。",
+  },
+  {
+    icon: "💡",
+    title: "簡単",
+    description: "誰でも直感的に使えるUIを提供します。",
+  },
+];
+---
+
+<section>
+  <h2>選ばれる3つの理由</h2>
+  <div class="grid">
+    {features.map((f) => (
+      <div class="card">
+        <span class="icon">{f.icon}</span>
+        <h3>{f.title}</h3>
+        <p>{f.description}</p>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  section {
+    padding: 5rem 2rem;
+    text-align: center;
+    background: #0f0f1a;
+    color: white;
+  }
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .card {
+    background: #1a1a2e;
+    padding: 2rem;
+    border-radius: 12px;
+  }
+  .icon {
+    font-size: 2.5rem;
+  }
+  h3 {
+    margin: 1rem 0 0.5rem;
+    font-size: 1.3rem;
+  }
+  p {
+    color: #aaa;
+    line-height: 1.6;
+  }
+</style>

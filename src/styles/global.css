@@ -1,4 +1,7 @@
 @import "tailwindcss";
+@import "./primitives.css";
+@import "./semantic.css";
+@import "./base.css";
 
 html {
   scroll-behavior: smooth;
